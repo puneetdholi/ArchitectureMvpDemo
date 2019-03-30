@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:card_view="http://schemas.android.com/tools"
     android:background="@color/bg">
 
     <RelativeLayout
@@ -53,389 +53,228 @@
     </RelativeLayout>
 
 
-            <RelativeLayout
-                android:id="@+id/rlPersonalDetails"
-                android:layout_width="match_parent"
-                android:layout_below="@+id/rlHeader"
+    <RelativeLayout
+        android:id="@+id/rlPersonalDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader"
+        android:layout_marginTop="15dp">
+
+        <FrameLayout
+            android:id="@+id/flProfileImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginLeft="30dp">
+
+
+            <ImageView
+                android:id="@+id/profile_image"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:src="@mipmap/app_icon" />
+
+            <ImageView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="15dp">
+                android:layout_gravity="bottom|right"
+                android:src="@drawable/like"
 
-                <FrameLayout
-                    android:id="@+id/flProfileImage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-
-                    android:layout_marginLeft="30dp">
+                />
 
 
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+        </FrameLayout>
 
-                        android:src="@mipmap/app_icon" />
-
-                    <ImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|right"
-                        android:src="@drawable/like"
-
-                        />
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/flProfileImage"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
 
 
-                </FrameLayout>
+            <TextView
+                android:id="@+id/txtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrar_regular"
+                android:maxLines="1"
+                android:text="Abhishek"
+                android:textColor="@color/colorWhite"
+
+                android:textSize="24dp" />
+
+            <TextView
+                android:id="@+id/txtDesignation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:ellipsize="end"
+                android:fontFamily="@font/montserrar_light"
+                android:maxLines="1"
+                android:text="Software Engineer"
+                android:textColor="@color/colorWhite"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txtLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:drawableLeft="@drawable/location_white"
+                android:drawablePadding="10dp"
+                android:fontFamily="@font/montserrar_regular"
+                android:text="Malabar Hills"
+                android:textColor="@color/colorWhite"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/llBody"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@+id/rlPersonalDetails"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="15dp"
+        android:background="@color/colorWhite"
+        card_view:cardCornerRadius="10dp"
+        card_view:cardElevation="2dp">
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal">
+
 
                 <LinearLayout
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="20dp"
-                      android:gravity="center_vertical"
-                    android:layout_toRightOf="@+id/flProfileImage"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:orientation="vertical">
 
 
                     <TextView
-                        android:id="@+id/txtName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:ellipsize="end"
-                        android:fontFamily="@font/montserrar_regular"
-                        android:maxLines="1"
-                        android:text="Abhishek"
-                        android:textColor="@color/colorWhite"
-
-                        android:textSize="24dp" />
-
-                    <TextView
-                        android:id="@+id/txtDesignation"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-
-                        android:ellipsize="end"
-                        android:fontFamily="@font/montserrar_light"
-                        android:maxLines="1"
-                        android:text="Software Engineer"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="14dp" />
-
-                    <TextView
-                        android:id="@+id/txtLocation"
+                        android:id="@+id/txtQualification"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:drawableLeft="@drawable/location_white"
-                        android:drawablePadding="10dp"
+
+                        android:drawableTop="@drawable/bag"
+                        android:drawablePadding="5dp"
                         android:fontFamily="@font/montserrar_regular"
-                        android:text="Malabar Hills"
-                        android:textColor="@color/colorWhite"
-                        android:textSize="16dp" />
+                        android:text="B Tech"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrar_light"
+                        android:text="Qualification"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="10dp" />
+
 
                 </LinearLayout>
-            </RelativeLayout>
 
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:background="@color/colorGrey" />
 
-
-
-            <LinearLayout
-                android:id="@+id/llBody"
-                android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:layout_below="@+id/rlPersonalDetails"
-                android:layout_marginTop="15dp"
-                android:layout_marginBottom="15dp"
-                android:layout_marginLeft="30dp"
-                android:layout_marginRight="30dp"
-                android:background="@color/colorWhite"
-                android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtQualification"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-
-                            android:drawableTop="@drawable/bag"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/montserrar_regular"
-                            android:text="B Tech"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14dp" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_light"
-                            android:text="Qualification"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="10dp" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/colorGrey" />
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtWorkExp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-
-                            android:drawableTop="@drawable/work_experience"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/montserrar_regular"
-                            android:text="10 years"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14dp" />
-
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_light"
-                            android:text="Work Experience"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="10dp" />
-
-
-                    </LinearLayout>
-
-                    <View
-                        android:layout_width="1dp"
-                        android:layout_height="30dp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="20dp"
-                        android:background="@color/colorGrey" />
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="80dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtExpectedCtc"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
-
-                            android:drawableTop="@drawable/expected_ctc"
-                            android:drawablePadding="5dp"
-                            android:fontFamily="@font/montserrar_regular"
-                            android:text="10-12 Lac"
-                            android:textColor="@color/colorBlack"
-                            android:textSize="14dp" />
-
-
-                        <TextView
-
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_light"
-                            android:text="Expected CTC"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="10dp" />
-
-
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@color/colorLightGrey"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtWorkExp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawableTop="@drawable/work_experience"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/montserrar_regular"
+                        android:text="10 years"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrar_light"
-                        android:text="Currently Working"
+                        android:text="Work Experience"
                         android:textColor="@color/colorGrey"
                         android:textSize="10dp" />
-
-
-                    <TextView
-                        android:id="@+id/txtCurrentlyWorking"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrar_regular"
-                        android:text="Mc Dermott Price"
-                        android:textColor="@color/colorDarkGrey"
-                        android:textSize="12dp" />
 
 
                 </LinearLayout>
 
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
                     android:background="@color/colorGrey" />
 
+
                 <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:background="@color/colorLightGrey"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
 
+
                     <TextView
+                        android:id="@+id/txtExpectedCtc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+
+                        android:drawableTop="@drawable/expected_ctc"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/montserrar_regular"
+                        android:text="10-12 Lac"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="14dp" />
+
+
+                    <TextView
+
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:fontFamily="@font/montserrar_light"
-                        android:text="Designation"
+                        android:text="Expected CTC"
                         android:textColor="@color/colorGrey"
                         android:textSize="10dp" />
-
-
-                    <TextView
-                        android:id="@+id/txtDesignationDetail"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrar_regular"
-                        android:text="Senior Design Manager"
-                        android:textColor="@color/colorDarkGrey"
-                        android:textSize="12dp" />
-
-
-                </LinearLayout>
-
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="0.5dp"
-                    android:background="@color/colorGrey" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:orientation="horizontal">
-
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtSkillSet"
-                            android:layout_width="50dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_semibold"
-                            android:gravity="center"
-                            android:text="SKILL SET"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="12dp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtWorkFunction"
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_semibold"
-                            android:gravity="center"
-                            android:text="WORK FUNCTION"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="12dp" />
-
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <TextView
-                            android:id="@+id/txtIndustry"
-                            android:layout_width="80dp"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrar_semibold"
-                            android:gravity="center"
-                            android:text="INDUSTRY"
-                            android:textColor="@color/colorGrey"
-                            android:textSize="12dp" />
-
-
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
-                    android:background="@color/colorLightGrey"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrar_regular"
-                        android:text="Adobe Photoshop | Sketch | Adobe Illustrator |"
-                        android:textColor="@color/colorDarkGrey"
-                        android:textSize="12dp" />
-
-
-                    <TextView
-
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/montserrar_regular"
-                        android:text="Indesign | Interaction Phototyping"
-                        android:textColor="@color/colorDarkGrey"
-                        android:textSize="12dp" />
 
 
                 </LinearLayout>
@@ -443,38 +282,209 @@
 
             </LinearLayout>
 
-
-            <RelativeLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="120dp"
-                android:layout_below="@+id/llBody"
-                android:background="@color/bg_green">
+                android:layout_height="45dp"
+                android:background="@color/colorLightGrey"
+                android:gravity="center"
+                android:orientation="vertical">
 
-                <Button
-                    android:id="@+id/btnConfirm"
-                    android:layout_width="260dp"
-                    android:layout_height="40dp"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="30dp"
-                    android:background="@drawable/rounded_button"
-                    android:fontFamily="@font/montserrar_bold"
-                    android:text="@string/confirm"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="11dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrar_light"
+                    android:text="Currently Working"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="10dp" />
 
 
                 <TextView
-                    android:id="@+id/txtEditProfile"
+                    android:id="@+id/txtCurrentlyWorking"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/btnConfirm"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="10dp"
-                    android:fontFamily="@font/montserrar_medium"
-                    android:text="Edit Profile"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="16dp" />
+                    android:fontFamily="@font/montserrar_regular"
+                    android:text="Mc Dermott Price"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12dp" />
 
-            </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/colorLightGrey"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrar_light"
+                    android:text="Designation"
+                    android:textColor="@color/colorGrey"
+                    android:textSize="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtDesignationDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrar_regular"
+                    android:text="Senior Design Manager"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorGrey" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtSkillSet"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrar_semibold"
+                        android:gravity="center"
+                        android:text="SKILL SET"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtWorkFunction"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrar_semibold"
+                        android:gravity="center"
+                        android:text="WORK FUNCTION"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtIndustry"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/montserrar_semibold"
+                        android:gravity="center"
+                        android:text="INDUSTRY"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="12dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorLightGrey"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrar_regular"
+                    android:text="Adobe Photoshop | Sketch | Adobe Illustrator |"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12dp" />
+
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/montserrar_regular"
+                    android:text="Indesign | Interaction Phototyping"
+                    android:textColor="@color/colorDarkGrey"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/llBody"
+        android:background="@color/bg_green">
+
+        <Button
+            android:id="@+id/btnConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/montserrar_bold"
+            android:text="@string/confirm"
+            android:textColor="@color/colorWhite"
+            android:textSize="11dp" />
+
+
+        <TextView
+            android:id="@+id/txtEditProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnConfirm"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/montserrar_medium"
+            android:text="Edit Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
 
 </RelativeLayout>
