@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/tools"
     android:background="@color/bg">
 
     <RelativeLayout
@@ -51,21 +52,13 @@
 
     </RelativeLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/rlHeader"
-        android:fillViewport="true">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
 
             <RelativeLayout
                 android:id="@+id/rlPersonalDetails"
                 android:layout_width="match_parent"
+                android:layout_below="@+id/rlHeader"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="15dp">
 
                 <FrameLayout
                     android:id="@+id/flProfileImage"
@@ -77,8 +70,8 @@
 
                     <ImageView
                         android:id="@+id/profile_image"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
 
                         android:src="@mipmap/app_icon" />
 
@@ -98,7 +91,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
                     android:layout_marginLeft="20dp"
-
+                      android:gravity="center_vertical"
                     android:layout_toRightOf="@+id/flProfileImage"
                     android:orientation="vertical">
 
@@ -143,24 +136,29 @@
             </RelativeLayout>
 
 
+
+
             <LinearLayout
                 android:id="@+id/llBody"
                 android:layout_width="match_parent"
-                android:layout_height="340dp"
+                android:layout_height="280dp"
                 android:layout_below="@+id/rlPersonalDetails"
-                android:layout_margin="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
                 android:background="@color/colorWhite"
                 android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="100dp"
+                    android:layout_height="80dp"
                     android:orientation="horizontal">
 
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="100dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -201,7 +199,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="100dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -242,7 +240,7 @@
 
                     <LinearLayout
                         android:layout_width="0dp"
-                        android:layout_height="100dp"
+                        android:layout_height="80dp"
                         android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="vertical">
@@ -279,7 +277,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:background="@color/colorLightGrey"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -312,7 +310,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="40dp"
                     android:background="@color/colorLightGrey"
                     android:gravity="center"
                     android:orientation="vertical">
@@ -346,7 +344,7 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="50dp"
                     android:orientation="horizontal">
 
 
@@ -448,13 +446,13 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="140dp"
+                android:layout_height="120dp"
                 android:layout_below="@+id/llBody"
                 android:background="@color/bg_green">
 
                 <Button
                     android:id="@+id/btnConfirm"
-                    android:layout_width="200dp"
+                    android:layout_width="260dp"
                     android:layout_height="40dp"
                     android:layout_centerHorizontal="true"
                     android:layout_marginTop="30dp"
@@ -471,17 +469,12 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/btnConfirm"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="10dp"
                     android:fontFamily="@font/montserrar_medium"
                     android:text="Edit Profile"
                     android:textColor="@color/colorWhite"
                     android:textSize="16dp" />
 
             </RelativeLayout>
-
-        </RelativeLayout>
-
-    </ScrollView>
-
 
 </RelativeLayout>
