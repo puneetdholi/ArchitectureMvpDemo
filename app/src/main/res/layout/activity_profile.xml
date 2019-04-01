@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/bg">
+    android:background="@drawable/background_gradient">
 
     <RelativeLayout
         android:id="@+id/rlHeader"
@@ -103,10 +102,9 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/montserrar_regular"
                 android:maxLines="1"
-                android:text="Abhishek"
+                android:text="Puneet"
                 android:textColor="@color/colorWhite"
-
-                android:textSize="24dp" />
+                android:textSize="24sp" />
 
             <TextView
                 android:id="@+id/txtDesignation"
@@ -118,7 +116,7 @@
                 android:maxLines="1"
                 android:text="Software Engineer"
                 android:textColor="@color/colorWhite"
-                android:textSize="14dp" />
+                android:textSize="14sp" />
 
             <TextView
                 android:id="@+id/txtLocation"
@@ -130,7 +128,7 @@
                 android:fontFamily="@font/montserrar_regular"
                 android:text="Malabar Hills"
                 android:textColor="@color/colorWhite"
-                android:textSize="16dp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
     </RelativeLayout>
@@ -141,9 +139,9 @@
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:layout_below="@+id/rlPersonalDetails"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="15dp"
         android:layout_marginTop="15dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginRight="15dp"
         android:layout_marginBottom="15dp"
         android:background="@color/colorWhite"
         card_view:cardCornerRadius="10dp"
@@ -151,10 +149,8 @@
 
 
         <LinearLayout
-
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:orientation="vertical">
 
             <LinearLayout
@@ -176,13 +172,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-
                         android:drawableTop="@drawable/bag"
                         android:drawablePadding="5dp"
                         android:fontFamily="@font/montserrar_regular"
                         android:text="B Tech"
                         android:textColor="@color/colorBlack"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
 
                     <TextView
@@ -191,7 +186,7 @@
                         android:fontFamily="@font/montserrar_light"
                         android:text="Qualification"
                         android:textColor="@color/colorGrey"
-                        android:textSize="10dp" />
+                        android:textSize="10sp" />
 
 
                 </LinearLayout>
@@ -217,13 +212,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-
                         android:drawableTop="@drawable/work_experience"
                         android:drawablePadding="5dp"
                         android:fontFamily="@font/montserrar_regular"
                         android:text="10 years"
                         android:textColor="@color/colorBlack"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
 
                     <TextView
@@ -232,7 +226,7 @@
                         android:fontFamily="@font/montserrar_light"
                         android:text="Work Experience"
                         android:textColor="@color/colorGrey"
-                        android:textSize="10dp" />
+                        android:textSize="10sp" />
 
 
                 </LinearLayout>
@@ -264,7 +258,7 @@
                         android:fontFamily="@font/montserrar_regular"
                         android:text="10-12 Lac"
                         android:textColor="@color/colorBlack"
-                        android:textSize="14dp" />
+                        android:textSize="14sp" />
 
 
                     <TextView
@@ -295,7 +289,7 @@
                     android:fontFamily="@font/montserrar_light"
                     android:text="Currently Working"
                     android:textColor="@color/colorGrey"
-                    android:textSize="10dp" />
+                    android:textSize="10sp" />
 
 
                 <TextView
@@ -305,7 +299,7 @@
                     android:fontFamily="@font/montserrar_regular"
                     android:text="Mc Dermott Price"
                     android:textColor="@color/colorDarkGrey"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -328,7 +322,7 @@
                     android:fontFamily="@font/montserrar_light"
                     android:text="Designation"
                     android:textColor="@color/colorGrey"
-                    android:textSize="10dp" />
+                    android:textSize="10sp" />
 
 
                 <TextView
@@ -338,7 +332,7 @@
                     android:fontFamily="@font/montserrar_regular"
                     android:text="Senior Design Manager"
                     android:textColor="@color/colorDarkGrey"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -370,8 +364,8 @@
                         android:fontFamily="@font/montserrar_semibold"
                         android:gravity="center"
                         android:text="SKILL SET"
-                        android:textColor="@color/colorGrey"
-                        android:textSize="12dp" />
+                        android:textColor="@color/grayLighter"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -391,8 +385,8 @@
                         android:fontFamily="@font/montserrar_semibold"
                         android:gravity="center"
                         android:text="WORK FUNCTION"
-                        android:textColor="@color/colorGrey"
-                        android:textSize="12dp" />
+                        android:textColor="@color/grayLighter"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -412,8 +406,8 @@
                         android:fontFamily="@font/montserrar_semibold"
                         android:gravity="center"
                         android:text="INDUSTRY"
-                        android:textColor="@color/colorGrey"
-                        android:textSize="12dp" />
+                        android:textColor="@color/grayLighter"
+                        android:textSize="12sp" />
 
 
                 </LinearLayout>
@@ -432,7 +426,7 @@
                     android:fontFamily="@font/montserrar_regular"
                     android:text="Adobe Photoshop | Sketch | Adobe Illustrator |"
                     android:textColor="@color/colorDarkGrey"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
 
 
                 <TextView
@@ -442,7 +436,7 @@
                     android:fontFamily="@font/montserrar_regular"
                     android:text="Indesign | Interaction Phototyping"
                     android:textColor="@color/colorDarkGrey"
-                    android:textSize="12dp" />
+                    android:textSize="12sp" />
 
 
             </LinearLayout>
@@ -455,22 +449,21 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_below="@+id/llBody"
-        android:background="@color/bg_green">
+        android:layout_below="@+id/llBody">
 
         <Button
             android:id="@+id/btnConfirm"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
+            android:layout_height="50dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="45dp"
             android:layout_marginTop="30dp"
-            android:layout_marginRight="30dp"
+            android:layout_marginRight="45dp"
             android:background="@drawable/rounded_button"
             android:fontFamily="@font/montserrar_bold"
             android:text="@string/confirm"
             android:textColor="@color/colorWhite"
-            android:textSize="11dp" />
+            android:textSize="11sp" />
 
 
         <TextView
@@ -483,7 +476,7 @@
             android:fontFamily="@font/montserrar_medium"
             android:text="Edit Profile"
             android:textColor="@color/colorWhite"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
     </RelativeLayout>
 
